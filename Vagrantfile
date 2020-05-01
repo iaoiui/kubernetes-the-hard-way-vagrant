@@ -6,6 +6,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "512"
+    # Address the issue https://github.com/hashicorp/vagrant/issues/9524
+    vb.customize ["modifyvm", :id, "--audio", "none"]
   end
 
   # must be at the top
