@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "512"
+    vb.memory = "4096"
     # Address the issue https://github.com/hashicorp/vagrant/issues/9524
     vb.customize ["modifyvm", :id, "--audio", "none"]
   end
